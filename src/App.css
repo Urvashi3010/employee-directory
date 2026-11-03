@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f6f9;
+}
+
+.app {
+min-height: 100vh;
+padding: 30px;
+}
+
+.header {
+margin-bottom: 30px;
+}
+
+.header h1 {
+font-size: 32px;
+color: #1e293b;
+margin-bottom: 10px;
+}
+
+.header p {
+color: #64748b;
+font-size: 16px;
+}
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: white;
+padding: 18px 25px;
+border-radius: 12px;
+margin-bottom: 30px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo h2 {
+color: #2563eb;
+font-size: 24px;
+}
+
+.nav-right {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.admin-name {
+color: #475569;
+font-weight: bold;
+}
+
+.add-btn {
+background-color: #2563eb;
+color: white;
+border: none;
+padding: 12px 18px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.add-btn:hover {
+background-color: #1d4ed8;
+}
+.employee-list {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.employee-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.employee-image {
+width: 90px;
+height: 90px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 15px;
+}
+
+.employee-card h3 {
+color: #1e293b;
+margin-bottom: 8px;
+}
+
+.employee-card p {
+color: #64748b;
+margin-bottom: 10px;
+font-size: 14px;
+}
+
+.employee-card h4 {
+color: #334155;
+margin-top: 12px;
+}
+
+.department {
+background-color: #dbeafe;
+color: #2563eb !important;
+display: inline-block;
+padding: 6px 12px;
+border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .employee-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-list {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 15px;
+  }
+}
+.employee-form {
+background-color: white;
+padding: 25px;
+border-radius: 12px;
+margin-bottom: 30px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.employee-form h2 {
+color: #1e293b;
+margin-bottom: 20px;
+}
+
+.employee-form form {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+}
+
+.employee-form input {
+padding: 12px;
+border: 1px solid #cbd5e1;
+border-radius: 8px;
+outline: none;
+}
+
+.employee-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.employee-form button {
+background-color: #2563eb;
+color: white;
+padding: 12px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+
+.employee-form button:hover {
+  background-color: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+.employee-form form {
+grid-template-columns: 1fr;
+}
+} 
+
+.card-buttons {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 15px;
+}
+
+.edit-btn {
+background-color: #f59e0b;
+color: white;
+border: none;
+padding: 8px 18px;
+border-radius: 6px;
+cursor: pointer;
+}
+
+.edit-btn:hover {
+background-color: #d97706;
+}
+
+.delete-btn {
+background-color: #ef4444;
+color: white;
+border: none;
+padding: 8px 18px;
+border-radius: 6px;
+cursor: pointer;
+}
+
+.delete-btn:hover {
+background-color: #dc2626;
+}
+
+.search-filter {
+display: flex;
+gap: 15px;
+margin-bottom: 25px;
+}
+
+.search-filter input {
+flex: 1;
+padding: 12px 15px;
+border: 1px solid #cbd5e1;
+border-radius: 8px;
+font-size: 14px;
+outline: none;
+}
+
+.search-filter input {
+border-color: #2563eb;
+}
+
+.search-filter select {
+padding: 12px 15px;
+border: 1px solid #cbd5e1;
+border-radius: 8px;
+background-color: white;
+font-size: 14px;
+cursor: pointer;
+}
+
+@media (max-width: 600px) {
+.search-filter {
+flex-direction: column;
+}
+}
+
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #64748b;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  .employee-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
+  }
+
+  .employee-list {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .employee-form {
+    padding: 15px;
+  }
+
+  .search-filter {
+    flex-direction: column;
+  }
+
+  .search-filter input,
+  .search-filter select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
